@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/styles.css" />
+    <title>APPMAKRO - Planilla de Entrega de Cuentas</title>
+  </head>
+  <body>
+    
+    <div class="topnav">
+    <a class="active" href="#home">Home</a>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+  </div>
+  
+    <form action="procesar_formulario.php" method="post">
+      <h1>CUADRE DE CUENTAS PARA ENTREGAR EN CAJA - TESORERIA</h1>
+
+      <!-- Información de la empresa y NIT (como texto informativo) -->
+      <div class="empresa-nit-container">
+        <p><strong>Empresa:</strong> SERVI ICE SAS</p>
+        <p><strong>NIT:</strong> 900134869-3</p>
+      </div>
+
+
+      <div class="info-container">
+        <div class="info-section">
+          <label for="colaborador">Colaborador:</label>
+          <select id="colaborador" name="colaborador">
+
+        <option value="ALDANA TORRES DANIEL FELIPE">
+          ALDANA TORRES DANIEL FELIPE
+        </option>
+        <option value="BERMUDEZ VARGAS JOHN ALEXANDER">
+          BERMUDEZ VARGAS JOHN ALEXANDER
+        </option>
+        <option value="BUITRAGO GARCIA SANTIAGO ANDRES">
+          BUITRAGO GARCIA SANTIAGO ANDRES
+        </option>
+        <option value="CHAPARRO CASTAÑEDA JOHN EDWIN">
+          CHAPARRO CASTAÑEDA JOHN EDWIN
+        </option>
+        <option value="GAONA HECTOR LEONEL">GAONA HECTOR LEONEL</option>
+        <option value="GOMEZ LEON FABIAN DAVID">GOMEZ LEON FABIAN DAVID</option>
+        <option value="GOMEZ VARGAS MANUEL ORLANDO">
+          GOMEZ VARGAS MANUEL ORLANDO
+        </option>
+        <option value="GUTIERREZ SANCHEZ STEVEN ANDRES">
+          GUTIERREZ SANCHEZ STEVEN ANDRES
+        </option>
+        <option value="LEAL QUINTERO JOHN ALEXANDER">
+          LEAL QUINTERO JOHN ALEXANDER
+        </option>
+        <option value="LEON BUSTOS JOHN FREDDY">LEON BUSTOS JOHN FREDDY</option>
+        <option value="MARTINEZ ESPINOZA CRISTIAN DAVID">
+          MARTINEZ ESPINOZA CRISTIAN DAVID
+        </option>
+        <option value="MATUSAN ZAMORA SANTIAGO">MATUSAN ZAMORA SANTIAGO</option>
+        <option value="MENDOZA RAMOS CRISTIAN DAVID">
+          MENDOZA RAMOS CRISTIAN DAVID
+        </option>
+        <option value="MESA RODRIGUEZ HUMBERTO">MESA RODRIGUEZ HUMBERTO</option>
+        <option value="RAMIREZ QUIROGA BRAYAN DUVAN">
+          RAMIREZ QUIROGA BRAYAN DUVAN
+        </option>
+        <option value="RODRIGUEZ RAMIREZ ANDRES CAMILO">
+          RODRIGUEZ RAMIREZ ANDRES CAMILO
+        </option>
+        <option value="SALAMANCA NIÑO CESAR MAURICIO">
+          SALAMANCA NIÑO CESAR MAURICIO
+        </option>
+        <option value="TIBATA QUINTERO ANDRES DANIEL">
+          TIBATA QUINTERO ANDRES DANIEL
+        </option>
+        <option value="TORRES MORENO MICHAEL YESID">
+          TORRES MORENO MICHAEL YESID
+        </option>
+        <option value="VELASQUEZ RIAÑO WALTER EMERSON">
+          VELASQUEZ RIAÑO WALTER EMERSON
+        </option>
+          </select>
+        </div>
+        <div class="info-section">
+            <label for="zona">Zona:</label>
+            <select id="zona" name="zona">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+    </select>
+</div>
+<div class="info-section">
+    <label for="placa">Placa:</label>
+    <select id="placa" name="placa">
+        <option value="KNL 111">KNL 111</option>
+        <option value="TTQ 260" selected>TTQ 260</option>
+        <option value="WGZ 291">WGZ 291</option>
+        <option value="KNM 033">KNM 033</option>
+        <option value="KNL 267">KNL 267</option>
+        <option value="WLQ 736">WLQ 736</option>
+        <option value="JKV 900">JKV 900</option>
+        <option value="WNN 591">WNN 591</option>
+        <option value="TLM 295">TLM 295</option>
+    </select>
+</div>
+<div class="info-section">
+    <label for="efectivo">Efectivo:</label>
+    <input type="text" id="efectivo" name="efectivo" />
+  </div>
+  <div class="info-section">
+    <label for="consignaciones">Consignaciones:</label>
+    <input type="text" id="consignaciones" name="consignaciones" />
+  </div>
+</div>
+<h2>Discriminación de Efectivo</h2>
+
+<div style="overflow-x:auto;">
+  <table>
+    <thead>
+      <tr>
+        <th>Denominación</th>
+        <th>Cantidad</th>
+        <th>Valor</th>
+      </tr>
+    </thead>
+    <tbody>
+          <!-- Filas adicionales según tus datos iniciales -->
+          <tr>
+            <td>$100000</td>
+            <td><input type="text" name="cantidad_100000" class="cantidad-input" maxlength="3"></td>
+            <td><input type="text" name="valor_100000" readonly></td>
+          </tr>
+          <tr>
+            <td>$50000</td>
+            <td><input type="text" name="cantidad_50000" class="cantidad-input" maxlength="3"></td>
+            <td><input type="text" name="valor_50000" readonly></td>
+          </tr>
+          <tr>
+            <td>$20000</td>
+            <td><input type="text" name="cantidad_20000" class="cantidad-input" maxlength="3"></td>
+            <td><input type="text" name="valor_20000" readonly></td>
+          </tr>
+          <tr>
+            <td>$10000</td>
+            <td><input type="text" name="cantidad_10000" class="cantidad-input" maxlength="3"></td>
+            <td><input type="text" name="valor_10000" readonly></td>
+          </tr>
+          <tr>
+            <td>$5000</td>
+            <td><input type="text" name="cantidad_5000" class="cantidad-input" maxlength="3"></td>
+            <td><input type="text" name="valor_5000" readonly></td>
+          </tr>
+          <tr>
+            <td>$2000</td>
+            <td><input type="text" name="cantidad_2000" class="cantidad-input" maxlength="3"></td>
+            <td><input type="text" name="valor_2000" readonly></td>
+          </tr>
+          <tr>
+            <td>$1000</td>
+            <td><input type="text" name="cantidad_1000" class="cantidad-input" maxlength="3"></td>
+            <td><input type="text" name="valor_1000" readonly></td>
+          </tr>
+          <tr>
+            <td>$500</td>
+            <td><input type="text" name="cantidad_500" class="cantidad-input" maxlength="3"></td>
+            <td><input type="text" name="valor_500" readonly></td>
+          </tr>
+          <tr>
+            <td>$200</td>
+            <td><input type="text" name="cantidad_200" class="cantidad-input" maxlength="3"></td>
+            <td><input type="text" name="valor_200" readonly></td>
+          </tr>
+          <tr>
+            <td>$100</td>
+            <td><input type="text" name="cantidad_100" class="cantidad-input" maxlength="3"></td>
+            <td><input type="text" name="valor_100" readonly></td>
+          </tr>
+          <tr>
+            <td>$50</td>
+            <td><input type="text" name="cantidad_50" class="cantidad-input" maxlength="3"></td>
+            <td><input type="text" name="valor_50" readonly></td>
+          </tr>
+          <tr>
+            <td><strong>TOTAL</strong></td>
+            <td></td>
+            <td><input type="text" name="total_efectivo" readonly></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <script src="/controllers/main.js"></script>
+  </body>
+</html>
+
